@@ -1,6 +1,6 @@
-class AnagramSol:
+class anagramSol:
     #func takes two strings and returns a bool
-    def isAnagram(self, s: str, t: str) -> bool:
+    def anagram(self, s: str, t: str) -> bool:
        #first checks to see if the len is equal or else fail
         if len(s) != len(t):
             return False
