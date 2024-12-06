@@ -1,1 +1,1 @@
-# tech_int
+For practicing LeetCode questions
