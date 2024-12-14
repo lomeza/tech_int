@@ -1,6 +1,27 @@
-class EncoderSol:
+"""
+Instruction:
+Encoder takes a list of strings and encodes them into
+a single string with separators.
+Decoder takes this string and reverts to list of strings
 
-    def encode(self, strs: List[str]) -> str:
+example:
+test=Encoder()
+test2.encode(["first", "second", "third", "fourth"])
+
+Output:
+'first/second/third/fourth'
+
+test2.decode('first/second/third/fourth')
+
+Output:
+['first', 'second', 'third', 'fourth']
+
+"""
+
+
+class Encoder:
+    
+    def encode(self, strs: list[str]) -> str:
         
         #if List arg is blank encode and pass as string "blank space"
         if not strs:
@@ -28,7 +49,7 @@ class EncoderSol:
             return newString
 
 
-    def decode(self, s: str) -> List[str]:
+    def decode(self, s: str) -> list[str]:
         #checks to see if str is empty; then returns empty list
         if s == ' ':
             newL=[]
@@ -38,7 +59,6 @@ class EncoderSol:
             newL=[""]
         
             if bool(s):
-                print(s.split("/"))
                 newL=s.split("/")
             #return list with splits; all else "" in list returned if empty
             return newL

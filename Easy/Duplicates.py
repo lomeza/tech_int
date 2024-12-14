@@ -1,21 +1,28 @@
-""" Given an integer array nums, 
-    return true if any value appears more than once in the array, 
-    otherwise return false."""
+""" 
+Instructions:
+Given an integer array nums, return true if there are any duplicates
 
-class DuplicateSol:
+Example:
+test1=Duplicates()
+test1.hasDupe([1,2,3,6,7,9,1])
+
+output:true
+"""
+
+class Duplicates:
     #def should return bool
     def hasDupe(self, nums: list[int]) -> bool:
         #inital declarations
         isDupe = False
-        lists=[]
+        listCheck=[]
         
-        #loop through list
+        #loop through list of digits
         for digits in nums:
             #check to see if number previously added into list
-            if digits in lists:
+            if digits in listCheck:
                 isDupe = True
                 return isDupe
             #add number to list if not duped
-            lists.append(digits)
+            listCheck.append(digits)
                 
         return isDupe
