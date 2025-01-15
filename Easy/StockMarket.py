@@ -11,7 +11,7 @@ class StockMarket:
                 profit = prices[r] - prices[l]
                 #compare maxP vs profit and change max to the higher number
                 maxP = max(maxP, profit)
-            #if l=r shift increment and check
+            #else l=r then increment r and check next num
             else:
                 l = r
             r += 1
